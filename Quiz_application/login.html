@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="Quiz.css">
+
+  <script>
+    function login() {
+      let u = document.getElementById("user").value;
+      let p = document.getElementById("pass").value;
+
+      const correctUser = "sravani";
+      const correctPass = "1234";
+
+      // restrict multiple attempts
+      if (sessionStorage.getItem("testDone") === "yes") {
+        alert("You already completed the test. You cannot take it again.");
+        return;
+      }
+
+      if (u === correctUser && p === correctPass) {
+        localStorage.setItem("username", u);
+        window.location.href = "quizz.html";
+      } else {
+        alert("Incorrect Username or Password");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="page">
+    <h2>Login</h2>
+
+    <input id="user" placeholder="Username">
+    <input id="pass" type="password" placeholder="Password">
+
+    <button class="btn" onclick="login()">Start Quiz</button>
+    <button class="btn grey" onclick="window.location.href='index.html'">Back</button>
+  </div>
+</body>
+</html>
