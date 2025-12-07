@@ -1,0 +1,33 @@
+body {
+    font-family: Arial;
+    background: #f0f0f0;
+}
+
+.container {
+    width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+}
+
+button {
+    background: #4b7bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+table, tr, td {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-collapse: collapse;
+}

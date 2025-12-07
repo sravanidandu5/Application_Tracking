@@ -6,10 +6,10 @@ body {
 }
 
 .page {
-  max-width: 400px;
+  max-width: 500px;
   margin: 50px auto;
   background: white;
-  padding: 20px;
+  padding: 20px 40px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -17,7 +17,7 @@ body {
 
 input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 6px 0;
   border: 1px solid #ccc;
   border-radius: 8px;

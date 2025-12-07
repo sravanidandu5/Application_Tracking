@@ -5,12 +5,25 @@
   <title>Login</title>
   <link rel="stylesheet" href="Quiz.css">
 
+ <div class="page">
+    <h2>Login</h2>
+
+    <input type="text" id="user" placeholder="Username" autocomplete="off">
+    <input type="password" id="pass" placeholder="Password" autocomplete="off">
+
+    <button class="btn" onclick="login()">Start Quiz</button>
+
+    <p class="demo-note">
+      Demo Login → Username: <b>demo</b> | Password: <b>1234</b>
+    </p>
+  </div>
+
   <script>
     function login() {
       let u = document.getElementById("user").value;
       let p = document.getElementById("pass").value;
 
-      const correctUser = "sravani";
+      const correctUser = "demo";
       const correctPass = "1234";
 
       // restrict multiple attempts
@@ -28,16 +41,4 @@
     }
   </script>
 </head>
-
-<body>
-  <div class="page">
-    <h2>Login</h2>
-
-    <input id="user" placeholder="Username">
-    <input id="pass" type="password" placeholder="Password">
-
-    <button class="btn" onclick="login()">Start Quiz</button>
-    <button class="btn grey" onclick="window.location.href='index.html'">Back</button>
-  </div>
-</body>
 </html>
