@@ -75,14 +75,23 @@ Contains three main cards:
 ## 📁 Folder Structure
 
 Application_Tracking/
+
 └── Job_App/
+
 ├── SimpleHttpServer.java
+
 ├── DBHelper.java
+
 ├── database.sql
+
 ├── mysql-connector-java.jar
+
 └── web/
+
 ├── index.html
+
 ├── style.css
+
 ├── script.js
 
 ---
@@ -91,6 +100,7 @@ Application_Tracking/
 
 ### 1. Import Database
 USE job_tracker;
+
 SOURCE database.sql;
 
 
@@ -132,7 +142,6 @@ Useful for:
 
 A clean and effective job application management tool.
 
----
 
 ## 📁 Folder Structure
 
