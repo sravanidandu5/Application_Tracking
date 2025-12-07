@@ -1,0 +1,89 @@
+:root{
+  --bg:#f7f7f8; --card:#fff; --muted:#777; --accent:#2ea6ff; --danger:#e1706d;
+  --maxWidth:1100px;
+}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#222;
+  padding:30px;
+  display:flex;
+  justify-content:center;
+}
+
+/* screen containers */
+.screen{width:100%;max-width:var(--maxWidth)}
+.hidden{display:none}
+
+/* landing */
+.landing-card{
+  background:var(--card);
+  border-radius:8px;
+  padding:60px 40px;
+  text-align:center;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+.landing-card h1{margin:0 0 20px;font-size:28px;letter-spacing:0.6px}
+.btn{padding:10px 16px;border-radius:6px;border:none;cursor:pointer}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.danger{background:var(--danger);color:#fff}
+
+/* app header */
+.app-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+.app-header h2{margin:0}
+
+/* layout */
+.app-main{display:flex;gap:18px}
+.top-cards{display:flex;flex-direction:column;gap:12px;width:220px}
+.action-card{
+  background:var(--card);padding:18px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.04);
+  text-align:center;font-weight:600;cursor:pointer;
+}
+.action-card:hover{transform:translateY(-3px);transition:all .14s}
+
+/* panels area */
+.panels{flex:1}
+.panel{background:var(--card);padding:18px;border-radius:8px;margin-bottom:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.panel h3{margin-top:0}
+
+/* form */
+.form-row{display:flex;gap:8px;align-items:center;margin-top:8px}
+.form-row input, .form-grid input, .form-grid select{
+  padding:10px;border-radius:6px;border:1px solid #ddd;flex:1;
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.small-muted{color:var(--muted);margin-top:8px}
+
+/* table */
+.table-wrap{overflow:auto;margin-top:6px}
+table{width:100%;border-collapse:collapse}
+thead th{text-align:left;padding:8px 10px;font-weight:700;color:var(--muted)}
+tbody td{padding:10px;border-top:1px solid #eee}
+table td button { margin-right:6px; }
+
+/* action buttons */
+.btn-sm {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.btn-warning { background:#ffb84d; color:#000; }
+.btn-danger  { background:#e1706d; color:#fff; }
+
+/* Exit button positioning */
+#exitBtn{margin-left:12px}
+
+/* responsive */
+@media(max-width:880px){
+  .app-main{flex-direction:column}
+  .top-cards{flex-direction:row;width:100%}
+  .form-grid{grid-template-columns:1fr}
+}

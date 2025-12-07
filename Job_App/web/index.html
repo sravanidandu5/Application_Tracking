@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Application Track System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Landing / Login screen -->
+  <div id="landing" class="screen">
+    <div class="card landing-card">
+      <h1>Application Track System</h1>
+      <button id="loginBtn" class="btn primary">Login</button>
+    </div>
+  </div>
+
+  <!-- Main app screen -->
+  <div id="app" class="screen hidden">
+    <header class="app-header">
+      <h2>Application Track System</h2>
+      <button id="exitBtn" class="btn danger">Exit</button>
+    </header>
+
+    <main class="app-main">
+      <!-- three icon-style cards -->
+      <section class="top-cards">
+        <div class="card action-card" data-panel="searchPanel">Search</div>
+        <div class="card action-card" data-panel="addPanel">Add Application</div>
+        <div class="card action-card" data-panel="listPanel">Applications</div>
+      </section>
+
+      <!-- panels area (collapsible, shown under cards) -->
+      <section class="panels">
+        <div id="searchPanel" class="panel hidden">
+          <h3>Search</h3>
+          <div class="form-row">
+            <input id="searchInput" placeholder="Search by company or role" />
+            <button id="searchBtn" class="btn">Search</button>
+            <button id="refreshBtn" class="btn">Refresh</button>
+          </div>
+        </div>
+
+        <div id="addPanel" class="panel hidden">
+          <h3>Add Application</h3>
+          <div class="form-grid">
+            <input id="company" placeholder="Company name" />
+            <input id="role" placeholder="Role title" />
+            <input id="location" placeholder="Location" />
+            <input id="applied_date" placeholder="Applied date (YYYY-MM-DD)" />
+            <select id="status">
+              <option>Applied</option>
+              <option>Interview</option>
+              <option>Offered</option>
+              <option>Rejected</option>
+            </select>
+            <input id="notes" placeholder="Notes" />
+          </div>
+          <div class="form-row">
+            <button id="addApplicationBtn" class="btn primary">Add Application</button>
+            <button id="cancelEditBtn" class="btn" style="display:none;margin-left:8px">Cancel Edit</button>
+          </div>
+          <div id="addMsg" class="small-muted"></div>
+        </div>
+
+        <div id="listPanel" class="panel hidden">
+          <h3>Applications</h3>
+          <div class="table-wrap">
+            <table id="appsTable">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Role</th>
+                  <th>Location</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Notes</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
